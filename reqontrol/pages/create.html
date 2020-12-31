@@ -5,33 +5,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>requisição</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <script src="../scripts/script.js"></script>
 </head>
 
-<body>
+<body id="body-create">
     <div class="titleForm">
-        <h1 class="title">Cadastrar requisição</h1>
-        <p>Insira as informações da sua requisição</p>
+        <h1 id="titulo" class="title">Cadastrar requisição</h1>
+        <p id="subtitulo">Insira as informações da sua requisição</p>
         <br />
     </div>
     <form>
-        <fieldset>
-            <div>
-                <label>ID</label>
-                <input type="text" name="ID" id="id" />
+        <fieldset id="grupo" class="grupo">
+            <div class="campo">
+                <label for="id"><strong>ID</strong></label>
+                <input type="text" name="ID" id="id" required />
             </div>
-            <div>
-                <label>Descrição</label>
-                <input type="text" name="Descrição" id="desc" />
+            <div class="campo">
+                <br />
+                <label for="desc"> <strong>Descrição</strong></label>
+                <textarea rows="5" style="width: 36em" name="Descrição" id="desc" required></textarea>
             </div>
-            <div>
-                <label>Status</label>
-                <input type="text" name="Status" id="status" />
+            <div class="campo">
+                <label for="status"><strong>Status</strong></label>
+                <input type="text" name="Status" id="status" required />
             </div>
-            <div>
-                <label>Destino</label>
-                <input type="text" name="Destino" id="destino" />
+            <div class="campo">
+                <label for="destino"><strong>Destino</strong></label>
+                <input type="text" name="Destino" id="destino" required />
             </div>
         </fieldset>
+        <button id="btn-submit" type="submit"><strong>Salvar</strong></button>
+        <button id="btn-back" type="back" onclick="home()">
+        <strong>Voltar</strong>
+      </button>
     </form>
 </body>
 
